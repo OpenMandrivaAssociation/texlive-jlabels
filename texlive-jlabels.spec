@@ -1,50 +1,49 @@
-# revision 23619
+# revision 24858
 # category Package
 # catalog-ctan /macros/latex/contrib/jlabels
-# catalog-date 2011-06-24 10:20:36 +0200
-# catalog-license other-free
+# catalog-date 2011-12-16 16:22:52 +0100
+# catalog-license nosource
 # catalog-version 2011-06-05
 Name:		texlive-jlabels
 Version:	20110605
-Release:	1
+Release:	2
 Summary:	Make letter-sized pages of labels
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/jlabels
-License:	OTHER-FREE
+License:	NOSOURCE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/jlabels.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/jlabels.doc.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The package provides controls for the numbers of rows and
 columns.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/latex/jlabels/jlabels.sty
 %doc %{_texmfdistdir}/doc/latex/jlabels/README
-%doc %{_texmfdistdir}/doc/latex/jlabels/README.TEXLIVE
+%doc %{_texmfdistdir}/doc/latex/jlabels/jlabels.pdf
+%doc %{_texmfdistdir}/doc/latex/jlabels/jlabels.tex
 %doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
