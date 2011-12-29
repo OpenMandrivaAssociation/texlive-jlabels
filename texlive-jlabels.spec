@@ -22,16 +22,8 @@ Requires(post):	texlive-kpathsea
 The package provides controls for the numbers of rows and
 columns.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -44,7 +36,6 @@ columns.
 %doc %{_texmfdistdir}/doc/latex/jlabels/README
 %doc %{_texmfdistdir}/doc/latex/jlabels/jlabels.pdf
 %doc %{_texmfdistdir}/doc/latex/jlabels/jlabels.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -55,5 +46,3 @@ columns.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
