@@ -46,3 +46,20 @@ columns.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20110605-3
++ Revision: 752898
+- Rebuild to reduce used resources
+
+* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110605-2
++ Revision: 745258
+- texlive-jlabels
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110605-1
++ Revision: 718752
+- texlive-jlabels
+- texlive-jlabels
+- texlive-jlabels
+
