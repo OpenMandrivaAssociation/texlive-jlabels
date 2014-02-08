@@ -6,7 +6,7 @@
 # catalog-version 2011-06-05
 Name:		texlive-jlabels
 Version:	20110605
-Release:	3
+Release:	4
 Summary:	Make letter-sized pages of labels
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/jlabels
