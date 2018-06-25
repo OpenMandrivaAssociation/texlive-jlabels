@@ -5,7 +5,7 @@
 # catalog-license nosource
 # catalog-version 2011-06-05
 Name:		texlive-jlabels
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Make letter-sized pages of labels
 Group:		Publishing
