@@ -3,7 +3,7 @@ Version:	24858
 Release:	2
 Summary:	Make letter-sized pages of labels
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/jlabels
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/jlabels
 License:	NOSOURCE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/jlabels.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/jlabels.doc.r%{version}.tar.xz
